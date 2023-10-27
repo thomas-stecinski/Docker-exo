@@ -1,0 +1,12 @@
+version: '3'
+services:
+  monsters:
+    build:
+      context: mosters
+      dockerfile: Dockerfile
+    volumes:
+      - ./posters:/posters
+    ports:
+      - "8080:8080"
+    environment:
+      - POSTER_DIR=../posters
